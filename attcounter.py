@@ -42,6 +42,13 @@ class AttemptCounter:
         self.attempts = 0
         self.label.config(text=f"Attempts: {self.attempts}")
         self.save_settings()
+
+    def set_attempts(self):
+        new_attempts = simpledialog.askinteger("Set Attempts", "Enter new number of attempts:", initialvalue=self.attempts)
+        if new_attempts is not None:
+            self.attempts = new_attempts
+            self.label.config(text=f"Attempts: {self.attempts}")
+            self.save_settings()
     
     def save_settings(self):
         settings = {
@@ -89,6 +96,7 @@ class AttemptCounter:
         settings_menu.add_command(label="Set Font Size", command=self.set_font_size)
         settings_menu.add_command(label="Set Text Color", command=self.set_text_color)
         settings_menu.add_command(label="Set Background Color", command=self.set_bg_color)
+        settings_menu.add_command(label="Set Attempts", command=self.set_attempts)
     
     def set_hotkey(self):
         new_hotkey = simpledialog.askstring("Set Hotkey", "Enter new hotkey:", initialvalue=self.hotkey)
