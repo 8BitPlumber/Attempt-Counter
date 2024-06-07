@@ -8,7 +8,7 @@ Font<br>
 Text Size<br>
 Text Color<br>
 Background Color<br>
-Save File Name<br>
+Number of Attempts<br>
 Can be customized by pressing the "Settings" button and entering the prefered values.<br>
 The application can track <b>attempts</b>, <b>reset</b>, and <b>save attempts</b> after closing the program.<br>
 To use, the <b>tkinter</b> and <b>keyboard</b> libraries are required.</p>
